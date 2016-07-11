@@ -1,0 +1,25 @@
+{
+  "name": "zsigmonddora",
+  "description": "zsigmonddora menswear",
+  "main": "index.html",
+  "authors": [
+    "cdog"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "zsigmond",
+    "dora"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
