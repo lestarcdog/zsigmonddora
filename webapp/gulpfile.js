@@ -2,6 +2,8 @@ var gulp = require("gulp");
 var sync = require('browser-sync').create();
 var changed = require("gulp-changed");
 var wiredep = require("wiredep");
+var minify = require("gulp-minify");
+var cleanCss = require('gulp-clean-css');
 
 gulp.task("devserver", ["build-dist"], function () {
     sync.init({
@@ -26,7 +28,10 @@ gulp.task("copy-js", function () {
 });
 
 gulp.task("copy-css", function () {
-    gulp.src("style.css").pipe(gulp.dest("dist"));
+    gulp.src("style.css")
+       .pipe(cleanCss())
+        .pipe(gulp.dest("dist"));
+
     var dest = "dist/lib/css";
     return gulp.src(wiredep().css)
         .pipe(changed(dest))
