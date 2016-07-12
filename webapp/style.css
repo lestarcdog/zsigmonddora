@@ -42,14 +42,15 @@ body {
     max-width: 80%;
     max-height: 80%;
     left: 50%;
-    transform: translateX(-50%);
+    top:50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 
 .medialink {
     position: fixed;
     z-index: 40;
-    top: 70%;
+    top: 72%;
     max-width: 15%;
     transition: opacity 0.5s;
     opacity: 0.8;
