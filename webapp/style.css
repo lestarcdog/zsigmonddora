@@ -1,12 +1,16 @@
 @font-face {
-	font-family: avenir-next-bold;
-    src: url(AvenirNextLTPro-Bold.woff);
+    font-family: avenir-next-bold;
+    src: url(lib/AvenirNextLTPro-Bold.woff);
 }
+
 body {
-  margin: 0;
-  background: #000; 
+    margin: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
 }
-#vid { 
+
+#vid {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -15,12 +19,61 @@ body {
     width: auto;
     height: auto;
     transform: translateX(-50%) translateY(-50%);
-	transition: 1s opacity;
+    z-index: 10;
 }
 
-#text {
-	position:relative;
-	font-size:20px;
-	color: white;
-	font-family:avenir-next-bold;
+#large-bg-logo {
+    position: fixed;
+    z-index: 11;
+    /*left: 50%;*/
+    height: 85%;
+    /*transform: translateX(-50%);*/
+}
+
+/*deprecated*/
+#container {
+    position: relative;
+    top: 0;
+    bottom: 0;
+
+}
+
+#middle {
+    position: fixed;
+    z-index: 30;
+    top: 40%;
+    left: 50%;
+    background: yellow;
+
+    transform: translateX(-50%) translateY(-40%);
+}
+
+#zsd-logo {
+    z-index: 31;
+    /*width: 100%;*/
+}
+
+#medialinks {
+    text-align: center;
+    background: red;
+}
+
+
+/*#medialinks img {*/
+    /*position: absolute;*/
+    /*z-index: 40;*/
+    /*display: inline-block;*/
+    /*max-height: 40%;*/
+/*}*/
+/*#medialinks img:nth-child(1) {*/
+    /*left:0;*/
+/*}*/
+
+/*#medialinks img:nth-child(2) {*/
+    /*left:50%;*/
+    /*transform: translateX(-50%);*/
+/*}*/
+
+#medialinks img:nth-child(3) {
+    right: 0;
 }
