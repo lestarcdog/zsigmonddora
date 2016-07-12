@@ -2,4 +2,3 @@ webapp/bower_components
 webapp/node_modules
 .idea/
 zsigmonddora.iml
-webapp/dist
