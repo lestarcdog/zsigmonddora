@@ -12,7 +12,7 @@ gulp.task("devserver", ["build-dist"], function () {
         }
     });
 
-    gulp.watch(["index.html", "style.css"], ["watch-devserver"]);
+    gulp.watch(["index.html", "style.css", "player.js"], ["watch-devserver"]);
 });
 
 gulp.task("watch-devserver", ["build-dist"], function () {
@@ -22,6 +22,10 @@ gulp.task("watch-devserver", ["build-dist"], function () {
 
 gulp.task("copy-js", function () {
     var dest = "dist/lib/js";
+    gulp.src("player.js")
+        .pipe(changed("dist"))
+        .pipe(gulp.dest("dist"));
+
     return gulp.src(wiredep().js)
         .pipe(changed(dest))
         .pipe(gulp.dest(dest));
@@ -29,7 +33,7 @@ gulp.task("copy-js", function () {
 
 gulp.task("copy-css", function () {
     gulp.src("style.css")
-       .pipe(cleanCss())
+        .pipe(cleanCss())
         .pipe(gulp.dest("dist"));
 
     var dest = "dist/lib/css";
