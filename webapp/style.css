@@ -67,8 +67,12 @@ body {
 .medialink {
     display: inline-block;
     max-height: 100%;
-    max-width: 100%;
+    width: auto;
     padding: 0 2%;
+}
+
+a:link, a:hover, a:visited, a:active {
+    text-decoration: none;
 }
 
 @media screen and (orientation: portrait){
