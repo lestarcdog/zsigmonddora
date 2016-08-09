@@ -3,3 +3,5 @@ webapp/node_modules
 .idea/
 zsigmonddora.iml
 node_modules/
+*.sublime-project
+*.sublime-workspace

@@ -1,0 +1,42 @@
+#page-header {
+  padding-top:10px;
+}
+
+#brand-img {
+  max-height:200px;
+}
+
+.navbar li > a {
+  color: black;
+}
+
+.navbar li > a:hover {
+  background: none; 
+}
+
+.navbar-nav .navlink-spinner {
+  text-align:center;
+  display: inline-block;
+ 
+  background: none;
+  color:black;
+  
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  line-height:-50%;
+  transform: rotate(0deg);
+  transition: background .5s, transform .5s;
+  -webkit-backface-visibility: hidden;
+}
+
+.navbar-nav > li > a:hover .navlink-spinner, .navbar-nav > li > a.active .navlink-spinner  {
+  background:black;
+  color:white;
+  transform: rotate(45deg);
+}
+
+#top-cart {
+  color:black;
+  padding-left:2em;
+}

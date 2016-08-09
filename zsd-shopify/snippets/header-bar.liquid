@@ -1,0 +1,52 @@
+<nav id="page-header" class="navbar navbar-fixed-top">
+    <div class="row">
+      <div class="col-xs-3">
+          <a href="/">
+            <img alt="zsigmonddora men's wear branding logo" id="brand-img" class="img-responsive" src="{{ 'zsigmonddoramenswear-logo.png' | asset_url  }}">
+          </a>
+      </div>
+      <div class="col-xs-offset-2 col-xs-6">
+        <!-- cart -->
+        <div class="row">
+        	<div class="col-xs-12">
+              <div class="pull-right">
+                 {% if shop.customer_accounts_enabled %}
+                      <ul class="list-inline">
+                        {% if customer %}
+                        <li>
+                          <a href="/account">My Account</a>
+                        </li>
+                        <li>
+                          {{ 'log out' | customer_logout_link }}
+                        </li>
+                        {% else %}
+                        <li>
+                          {{ 'log in' | customer_login_link }}
+                        </li>
+                        <li> or </li>
+                        <li>
+                          {{ 'register' | customer_register_link }}
+                        </li>
+                        <li id="top-cart">
+                          <a href="/cart">
+                             <i class="fa fa-shopping-basket fa-lg" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                        {% endif %}
+                      </ul>
+                    {% endif %}
+               </div>
+          </div>
+        </div>
+        <!-- main navigation -->
+        <div class="row">
+          <div class="col-xs-12">
+              <div class="pull-right">
+			        {% include 'site-nav' %}		      
+              </div>
+          </div> 
+        </div>  
+        
+    </div>
+    </div>
+</nav>
